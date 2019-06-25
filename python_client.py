@@ -15,7 +15,6 @@ class OpenSpaceAPI:
         self._ws = create_connection(f"ws://{self.host}:{self.port}/websocket")
 
     def send_json(self, data):
-        print(json.dumps(data).encode('ascii'))
         self._ws.send(json.dumps(data).encode('ascii'))
 
 
